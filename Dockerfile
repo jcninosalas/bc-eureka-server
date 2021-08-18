@@ -4,5 +4,5 @@ RUN addgroup -S spring && adduser -S spring -G spring
 USER spring:spring
 EXPOSE 8080
 ENV JAR_FILE=target/bc-eureka-server-0.0.1-SNAPSHOT.jar
-ADD ${JAR_FILE} eureka-server.jar
+COPY ${JAR_FILE} eureka-server.jar
 ENTRYPOINT ["java", "-jar", "/eureka-server.jar"]
