@@ -33,7 +33,7 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_943b5aa688f34806a7f582a71ba2525b }}
         password: ${{ secrets.AzureAppService_ContainerPassword_845a0ac1f036454ba9ea1d7f95296800 }}
 
-    - run: mvn clean install
+    - run: mvn -B clean compile package -DskipTests
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
