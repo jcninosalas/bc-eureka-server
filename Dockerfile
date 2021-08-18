@@ -1,6 +1,6 @@
-FROM openjdk:11.0.7-jre-slim-buster
+FROM adoptopenjdk/openjdk11
 
-RUN addgroup -S spring && adduser -S spring -G spring
+RUN adduser --system --group spring
 USER spring:spring
 EXPOSE 8080
 ARG JAR_FILE=target/*.jar
