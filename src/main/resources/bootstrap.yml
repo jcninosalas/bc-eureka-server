@@ -2,8 +2,14 @@ spring:
   application:
     name: bc-eureka-server
 
-  cloud:
-    config:
-      uri: https://config-server-pj2.mybluemix.net/
-      username: ${SECURITY_USERNAME}
-      password: ${SECURITY_PASSWORD}
+#  cloud:
+#    config:
+#      uri: ms-config-server.azurewebsites.net
+#      username: ${SECURITY_USERNAME}
+#      password: ${SECURITY_PASSWORD}
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
