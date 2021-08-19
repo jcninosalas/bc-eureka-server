@@ -95,7 +95,7 @@ jobs:
       - name: Verify file project
         run: ls -l
 
-      -run: cd target/ && ls -l
+      - run: cd target/ && ls -l
 
       - uses: actions/upload-artifact@v2
         with:
