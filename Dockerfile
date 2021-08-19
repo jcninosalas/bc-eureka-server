@@ -22,7 +22,7 @@ RUN mkdir -p /opt/logs
 WORKDIR /opt
 EXPOSE 8080
 ADD *.jar /opt/
-RUN cd /opt && ls -l
+RUN cd /opt/java && ls -l
 ENTRYPOINT [ "sh", "-c" ]
 CMD ["exec java -Duser.timezone=America/Lima  \
                 -jar *.jar"]
