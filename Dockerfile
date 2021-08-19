@@ -13,7 +13,6 @@ USER spring:spring
 #ARG JAR_FILE=target/*.jar
 ARG JAR_FILE=/workspace/target/*.jar
 COPY --from=build ${JAR_FILE} app.jar
-EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 
