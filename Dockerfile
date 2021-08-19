@@ -18,10 +18,16 @@
 
 FROM adoptopenjdk/openjdk11
 
-RUN ls -l
-ENV JAR_FILE=bc-eureka-server-0.0.1-SNAPSHOT.jar
-COPY ${JAR_FILE} app.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]
+RUN mkdir -p /opt/logs
+WORKDIR /opt
+
+ADD *.jat /opt/
+ENTRYPOINT [ "sh", "-c" ]
+CMD ["exec java -Duser.timezone=America/Lima  \
+                -jar *.jar"]
+#ENV JAR_FILE=bc-eureka-server-0.0.1-SNAPSHOT.jar
+#COPY ${JAR_FILE} app.jar
+#EXPOSE 8080
+#ENTRYPOINT ["java","-jar","/app.jar"]
 
 
