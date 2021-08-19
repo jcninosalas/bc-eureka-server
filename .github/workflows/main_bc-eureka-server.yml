@@ -50,6 +50,7 @@ jobs:
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
+        context: ./
         push: true
         tags: everisbank.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_943b5aa688f34806a7f582a71ba2525b }}/bc-eureka-server:${{ github.sha }}
         file: ./Dockerfile
