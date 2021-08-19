@@ -95,11 +95,7 @@ jobs:
       - name: Verify file project
         run: ls -l
 
-      - name: Copy Jar
-        run: cp /target/*.jar app.jar
-
-      - name: Verify file project
-        run: ls -l
+      -run: cd target/ && ls -l
 
       - uses: actions/upload-artifact@v2
         with:
