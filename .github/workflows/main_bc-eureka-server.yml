@@ -93,7 +93,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 
       - run: mkdir -p staging
-      - run: cp /target/*.jar /staging/app.jar
+      - run: cp ./target/*.jar ./staging/app.jar
       - run: cd staging && ls -l
 
       - uses: actions/upload-artifact@v2
