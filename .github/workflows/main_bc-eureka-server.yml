@@ -96,10 +96,10 @@ jobs:
         run: ls -l
 
       - name: Copy Jar
-        run: cp `ls -d`/target/*.jar /devops/app.jar
+        run: cp /target/*.jar app.jar
 
       - name: Verify file project
-        run: cd devops && ls -l
+        run: ls -l
 
       - uses: actions/upload-artifact@v2
         with:
