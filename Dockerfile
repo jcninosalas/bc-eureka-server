@@ -1,5 +1,5 @@
-#FROM maven:3.6.3-openjdk-14-slim AS build
-FROM maven:lastest AS build
+FROM maven:3.6.3-openjdk-14-slim AS build
+#FROM maven:lastest AS build
 
 RUN mkdir -p /workspace
 WORKDIR /workspace
