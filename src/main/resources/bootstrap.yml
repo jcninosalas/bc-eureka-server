@@ -24,6 +24,6 @@ server:
   wait-time-in-ms-when-sync-empty: 0
   # Establecer en falso, desactivar autoprotección, predeterminado verdadero
   enable-self-preservation: true
-  La información del nodo #Peer se actualiza regularmente, el valor predeterminado es 600 s, que es 10 minutos, para sincronizar la información del nodo en el servidor eureka
+  #La información del nodo Peer se actualiza regularmente, el valor predeterminado es 600 s, que es 10 minutos, para sincronizar la información del nodo en el servidor eureka
   peer-eureka-nodes-update-interval-ms: 10000
 
